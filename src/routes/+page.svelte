@@ -91,7 +91,7 @@
 		<a href="/" class="p-2 ml-4 rounded-xl w-fit -mt-1 text-xl font-bold bg-surface-200">
 			Podcast downloader
 		</a>
-		<p>Download the mp3 files of shows hosted on apple podcasts</p>
+		<p class="hidden sm:block">Download the mp3 files of shows hosted on apple podcasts</p>
 	</header>
 	{#if data.items}
 		<div class="card-with-opacity bg-surface-200 shadow p-6 m-2 rounded-xl">
@@ -132,7 +132,7 @@
 		</div>
 		<div class="grid gap-2 p-2">
 			{#each data.items as item}
-				<div class="py-2 px-4 card-with-opacity grid grid-cols-3">
+				<div class="py-2 px-4 card-with-opacity grid gap-2 md:grid-cols-2">
 					<div>
 						<div class="font-bold mb-2">
 							<h2>{item.title}</h2>
@@ -142,11 +142,11 @@
 						</div>
 					</div>
 
-					<audio controls preload="none" class="m-auto w-[300px]">
-						<source src={item.enclosure?.url} type="audio/mpeg" />
-						Your browser does not support the audio element.
-					</audio>
-					<div class="m-auto">
+					<div class="mt-2 md:mt-0">
+						<audio controls preload="none" class="m-auto w-full">
+							<source src={item.enclosure?.url} type="audio/mpeg" />
+							Your browser does not support the audio element.
+						</audio>
 						<button class="flex space-x-2 [&>*]:pointer-events-none" use:popup={popupHover}>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
