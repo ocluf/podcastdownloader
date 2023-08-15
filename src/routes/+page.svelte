@@ -70,12 +70,6 @@
 	};
 </script>
 
-<svelte:head>
-	<title>Podcast mp3 downloader</title>
-	<meta name="description" content="Download the mp3 files from apple podcasts" />
-	<meta name="keywords" content="Podcast Download mp3" />
-	<meta name="author" content="Fulco" />
-</svelte:head>
 <div class="card p-4 max-w-[300px] variant-filled-surface-100 z-[1000]" data-popup="popupHover">
 	<h1>With Chrome</h1>
 	<p>On the audio element simply click the 3 dots and click download</p>
